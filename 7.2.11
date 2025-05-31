@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+//尋找 完美數(perfect number) ex. 6 = 1 + 2 + 3  在1-1000之間
+
+int main(void)
+{
+    int i,j,temp;
+    
+    for(i =1; i<=1000; i++)
+    {
+        temp =0;
+        
+        for(j=1; j<i ;j++)
+        {
+            if(i%j==0)
+            {
+                temp+=j;
+            }
+        }
+        if(temp == i)
+        {
+            printf("%d ",i); 
+        }
+        
+    }
+    return 0;
+}
