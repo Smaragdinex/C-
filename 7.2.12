@@ -1,0 +1,23 @@
+#include <stdio.h>
+//找 Armstrong 數（阿姆斯壯數），也稱為 水仙花數 ex: 1³ + 5³ + 3³ = 153
+
+int main(void)
+{
+    int i, a, b, c, sum;
+
+    for(i = 100; i <= 999; i++)
+    {
+        a = i / 100;        // 百位
+        b = (i / 10) % 10;  // 十位
+        c = i % 10;         // 個位
+
+        sum = a*a*a + b*b*b + c*c*c;
+
+        if(sum == i)
+        {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
