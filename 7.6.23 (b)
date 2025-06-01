@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+//計算 1 + 2 + 3 + ... + n，直到總和大於等於 1000，並輸出最小的 n 
+
+int main(void)
+{
+    int i=1,sum=0,count=0;
+    
+    while( sum <= 1000)
+    {
+        sum+=i;
+        i++;
+        count++;
+    }
+    printf("%d",count);
+    
+    return 0;
+}
