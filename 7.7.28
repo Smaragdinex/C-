@@ -1,0 +1,20 @@
+#include <stdio.h>
+//兩層 do...while 迴圈來印出 九九乘法表
+
+int main(void)
+{
+    int i,j=1;
+    
+    do{
+        i=1;
+        do{
+            printf("%d * %d = %-2d ",i,j,i*j);
+            i++;
+        }while(i<=9);
+        
+        printf("\n");
+        j++;
+        
+    }while(j<=9);
+    return 0;
+}
