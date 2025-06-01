@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+//執行 3 次輸入，每次輸入一個數字 n，如果 n 在 1～50 之間，就印出 n 個 *；如果不在範圍內，就跳過這次，不算次數
+
+int main(void)
+{
+    int i,t=1,n;
+    
+    do{
+        scanf("%d",&n);
+        
+        if(n < 1 && n > 50) continue;
+        
+        for(i =0; i <n; i++)
+        {
+            printf("*");
+        }
+        printf("\n");
+        t++;
+        
+    }while(t<=3);
+    
+    return 0;
+}
