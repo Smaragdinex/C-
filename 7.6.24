@@ -1,0 +1,23 @@
+#include <stdio.h>
+//輸入 3 次整數 n，每次輸入後印出 n 個星星 *」，如果 n 不在 1～50 範圍內就跳過
+
+int main(void)
+{
+    int i,n,t=3;
+    
+    while(t>0)
+    {
+        scanf("%d",&n);
+        
+        if(n < 1 || n >50) continue;
+        
+        for(i=0; i<n; i++)
+            printf("*");
+            
+        printf("\n");
+        
+        t--;
+        
+    }
+    return 0;
+}
