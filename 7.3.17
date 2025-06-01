@@ -1,0 +1,20 @@
+
+//while 迴圈計算並印出從 1² 到 10² 的平方值 並將這些平方值加總，最後印出總和
+
+#include <stdio.h>
+
+int main(void)
+{
+    int i=1,sum=0;
+    
+    while( i!= 11)
+    {
+        printf("%d\n", i*i);
+        sum+= i*i;
+        i++;
+    }
+    
+    printf("%d\n",sum);
+    
+    return 0;
+}
