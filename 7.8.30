@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+//使用者最多輸入密碼 3 次
+
+//輸入正確 → 顯示歡迎訊息並 break
+
+//失敗 3 次 → 顯示封鎖訊息並結束
+
+int main(void)
+{
+    int input;
+
+    int password = 6128;
+    
+    for(int i=0; i < 3; i++)
+    {
+        printf("Please Enter Passwrod: ");
+        scanf("%d",&input);
+        if(input == password) 
+        {
+            printf("Correct, Welcome System\n");
+            break;
+        }
+        if(i == 2)
+        {
+            printf("Passwrod input over 3rd time!!\n"); 
+            break;
+        }
+    }
+    
+    return 0;
+}
