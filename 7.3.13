@@ -1,0 +1,26 @@
+#include <stdio.h>
+// 用while迴圈 計算 2 + 4 + 6 +...+ n 總和, n 是正整數 可以自由輸入, 若不是正偶數讓使用者再次輸入 直到正奇數 
+
+int main(void)
+{
+    int n, i, sum;
+
+    while(1)
+    {
+        scanf("%d", &n);
+
+        if(n % 2 == 1) continue;  // 如果是奇數，重新輸入
+
+        sum = 0;  // 每次開始計算前初始化
+
+        for(i = 2; i <= n; i += 2)
+        {
+            sum += i;
+        }
+
+        printf("%d\n", sum);  // 修正為 sum 並加換行
+        break;  // 輸入偶數後就跳出
+    }
+
+    return 0;
+}
