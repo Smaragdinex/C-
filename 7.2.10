@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-// 用迴圈 計算 1 + 1/2 + 1/3 + ... + 1/n 總和, n 可自行輸入
+// 用迴圈 計算 1 + 1/2 + 1/3 + ... + 1/n 總和, n 可自行輸入 
 
 
 int main(void)
