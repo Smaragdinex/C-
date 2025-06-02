@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+double f(double x);
+
+int main(void)
+{
+    printf("%.2f",f(0));
+
+    return 0;
+}
+
+double f(double x)
+{
+    return 3 * ((x) * (x) * (x)) + 2 * (x) - 1;
+}
