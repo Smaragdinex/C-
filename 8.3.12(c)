@@ -1,0 +1,28 @@
+#include <stdio.h>
+double my_fun(int n);
+
+int main(void)
+{
+    int n = 1;
+    while(1)
+    {
+        if(my_fun(n) > 0.99999)
+        {
+            printf("%d",n);
+            break;
+        }
+        n++;
+    }
+    
+    return 0;
+}
+
+double my_fun(int n)
+{
+    if(n==0)
+    return 0.0;
+
+    return 1.0 / (1<<n) + my_fun(n-1);
+}
+    
+    
