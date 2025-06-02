@@ -1,39 +1,38 @@
-#include <stdlib.h> //standrad library
-#include <stdio.h> //standrad input/output
+#include <stdio.h>
 
-int prime(int n); //function prototype and definition
+int prime(int n);
 
 int main(void)
 {
-  int n = 100;
-  printf("%d",prime(n));
+    printf("%d",prime(100));
 
-  return 0;
+    return 0;
 }
 
 int prime(int n)
 {
-  int count = 0;
-  int i = 2;
+    int count = 0;
+    int num = 2;
 
-  while(1)
-  {
-    int isPrime = 1;
-    for(int j = 2; j*j <=i; j++)
+    while (1)
     {
-      if(i % j == 0)
-        { 
-          isPrime = 0;
-          break;
+        int isPrime = 1;
+        for (int i = 2; i * i <= num; i++)
+        {
+            if (num % i == 0)
+            {
+                isPrime = 0;
+                break;
+            }
         }
-    }
 
-    if(isPrime)
-    {
-      count++;
-      if(count == n)
-        return i;
+        if (isPrime)
+        {
+            count++;
+            if (count == n)
+                return num;
+        }
+
+        num++;
     }
-      i++;
-  }
 }
