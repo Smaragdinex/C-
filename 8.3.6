@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int power(int x, int n);
+
+int main(void)
+{
+    printf("%d",power(5,3));
+
+    return 0;
+}
+
+int power(int x, int n)
+{
+    int sum = 1;
+    while(n--)
+    {
+        sum *= x;
+    }
+    
+    return sum;
+}
