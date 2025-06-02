@@ -1,0 +1,25 @@
+#include <stdio.h>
+//宣告一個整數陣列 arr[5]
+
+//用 for 迴圈依序將 1, 2, 3, 4, 5 存進陣列中
+
+//再用另一個 for 迴圈把陣列內容逐行印出
+
+int main(void)
+{
+    int i, input;
+    int arr[5];
+    
+    for(i = 0,input=1; i < 5; i++)
+    {
+        arr[i] = input;
+        input++;
+    }
+    
+    for(i = 0; i < 5; i++)
+    {
+        printf("arr[%d] = %d\n",i, arr[i]);
+    }
+
+    return 0;
+}
