@@ -1,0 +1,23 @@
+#include <stdio.h>
+double my_fun(int n);
+
+int main(void)
+{
+    
+    printf("%.2f\n",my_fun(3));
+    printf("%.2f\n",my_fun(4));
+    printf("%.2f\n",my_fun(5));
+    printf("%.2f\n",my_fun(6));
+        
+    return 0;
+}
+
+double my_fun(int n)
+{
+    if(n==0)
+    return 0.0;
+    else
+    return 1.0 / (1<<n) + my_fun(n-1);   // 1 << n ==  1 * 2^n 
+}
+    
+    
