@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int rsum(int n);
+
+int main(void)
+{
+    printf("%d",rsum(2));
+    return 0;
+}
+
+int rsum(int n)
+{
+    if(n==1)
+        return 2;
+    else
+        return n * (n+1) + rsum(n-1);
+}
