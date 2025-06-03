@@ -1,0 +1,118 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define ROW 3
+#define COL 5
+
+int main(void)
+{
+    int A = 12;
+    int B = 16;
+    int C = 10;
+    int D = 14;
+    int E = 15;
+    
+    int i,j;
+    
+    int sale1=0,sale2=0,sale3=0;
+    
+    int pA=0,pB=0,pC=0,pD=0,pE=0;
+    
+    int sale[ROW][COL]= {{33,32,56,45,33},{77,33,68,88,45},{43,55,43,67,65}};
+    
+    int bestsale = 0;
+    int total = 0;
+    int totalP = 0;
+    char bestProduct;
+    
+    for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+            if(i==0)
+            {
+                sale1 += sale[i][j];
+                if(sale1 > total)
+                {
+                    total = sale1;
+                    bestsale = 1;
+                }
+            }
+            else if(i==1)
+            {
+                sale2 += sale[i][j];
+                if(sale2 > total)
+                {
+                    total = sale2;
+                    bestsale = 2;
+                }
+            }
+            else if(i ==2)
+            {
+                sale3 += sale[i][j];
+                if(sale3 > total)
+                {
+                    total = sale3;
+                    bestsale = 3;
+                }
+                    
+            }
+            if(j == 0)
+            {
+                pA+= sale[i][j];
+                if(pA > totalP)
+                {
+                    totalP = pA;
+                    bestProduct = 'A';
+                }
+            }
+            else if(j == 1)
+            {
+                pB+= sale[i][j];
+                if(pB > totalP)
+                {
+                    totalP = pB;
+                    bestProduct = 'B';
+                }
+            }
+            else if(j == 2)
+            {
+                pC+= sale[i][j];
+                if(pC > totalP)
+                {
+                    totalP = pC;
+                    bestProduct = 'C';
+                }
+            }
+            else if(j == 3)
+            {
+                pD+= sale[i][j];
+                if(pD > totalP)
+                {
+                    totalP = pD;
+                    bestProduct = 'D';
+                }
+            }
+            else if(j == 4)
+            {
+                pE+= sale[i][j];
+                if(pE > totalP)
+                {
+                    totalP = pE;
+                    bestProduct = 'E';
+                }
+            }
+        }
+    }
+    printf("sale 1 銷售總金額 %d\n",sale1);
+    printf("sale 2 銷售總金額 %d\n",sale2);
+    printf("sale 3 銷售總金額 %d\n",sale3);
+    printf("Product A 銷售總金額 %d\n",pA);
+    printf("Product B 銷售總金額 %d\n",pB);
+    printf("Product C 銷售總金額 %d\n",pC);
+    printf("Product D 銷售總金額 %d\n",pD);
+    printf("Product E 銷售總金額 %d\n",pE);
+    printf("Best sales is %d\n", bestsale);
+    printf("Best Product is %c\n",bestProduct);
+    return 0;
+}
+
