@@ -7,7 +7,7 @@ int fibloop(int n);
 
 int main(void)
 {
-    printf("%d",fibloop(30));
+    printf("%d",fibloop(7));
     return 0;
 }
 
@@ -38,7 +38,7 @@ int fibloop(int n)
     int a = 1, b = 1, c;
     int i;
 
-    for (i = 1; i <= n; i++)
+    for (i = 3; i <= n; i++)
     {
         counter(); // 每次迴圈也呼叫 counter
         c = a + b;
