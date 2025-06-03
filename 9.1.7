@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    float arr[5];
+    
+    int i;
+    
+    float average=0,total=0;
+    
+    for(i =0; i<5; i++)
+    {
+        scanf("%f",&arr[i]);
+    }
+    
+    for(i=0;i<5;i++)
+    {
+        total += arr[i];
+    }
+    
+    average = total / 5.0;
+    
+    printf("%f",average);
+    
+    return 0;
+}
+
