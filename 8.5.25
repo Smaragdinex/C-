@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void counter(void);
+int fib(int n);
+
+int main(void)
+{
+    printf("%d",fib(5));
+    return 0;
+}
+
+void counter(void)
+{
+    static int n = 0;
+    n++;
+    printf("counter() call by %d times\n",n);
+
+}
+int fib(int n)
+{
+    counter();
+    if(n==1 || n==2)
+        return 1;
+    else
+        return (fib(n-1) + fib(n-2));
+}
