@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define PI 3.14
+#define CIRCLE(r) ((PI) * (r) * (r))
+#define RECTANGLE(length,height) ((length) * (height))
+#define TRIANGLE(base,height) ((base) * (height)/2.)
+
+#define "area.h" //C:\area.h
+
+int main(void)
+{
+    double base = 10.0;
+    double height = 2.0;
+    printf("%f",TRIANGLE(base,height);
+    return 0;
+}
+
