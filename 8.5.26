@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void counter(void);
+double rpower(double b, int n);
+
+int main(void)
+{
+    printf("%.2f",rpower(2.0,3));
+    return 0;
+}
+
+void counter(void)
+{
+    static int n = 0;
+    n++;
+    printf("counter() call by %d times\n",n);
+
+}
+
+double rpower(double b, int n)
+{
+    counter();
+    if(n == 0)
+        return 1;
+    else
+        return 2 * rpower(b , n-1);
+}
