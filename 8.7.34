@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define ABS(x) (((x)<0) ? (double)(-(x)) : (double)(x))
+
+int main(void)
+{
+    printf("%f",ABS(-13.6));
+    return 0;
+}
