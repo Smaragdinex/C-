@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int n = 0;
+void counter(void);
+
+int main(void)
+{
+   counter();
+   counter();
+    return 0;
+}
+
+void counter(void)
+{
+    n++;
+    printf("counter() call by %d times\n",n);
+
+}
