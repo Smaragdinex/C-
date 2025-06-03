@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    char str[] = "Hello, C language"; // \0 要包含
+    
+    printf("%ld",sizeof(str));
+    
+    return 0;
+}
