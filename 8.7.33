@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define AVERAGE(x,y) ((double) ((x) + (y)) / 2.0)
+
+int main(void)
+{
+    printf("%f",AVERAGE(12.6,4.2));
+    return 0;
+}
+
