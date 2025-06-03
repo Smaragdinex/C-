@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define ROW 4
+#define COL 3
+
+int main(void)
+{
+    int i,j;
+    int arr[ROW][COL] = {{1,2,3},{0,5,7},{3,4,6},{5,6,7}};
+    
+    int min = arr[0][0];
+    int mini,minj;
+
+    for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+            if(min > arr[i][j])
+            {
+                min = arr[i][j];
+                mini = i;
+                minj = j;
+            }
+        }
+    }
+    
+    printf("min index is [%d][%d] = %d",mini,minj,min);
+    
+    return 0;
+}
+
