@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CUBIC(x) ((double) (x) * (x) * (x))
+
+int main(void)
+{
+    printf("%f\n",CUBIC(5));
+    printf("%f\n",CUBIC(1 + 1));
+    printf("%f\n",CUBIC(2.4));
+    return 0;
+}
+
