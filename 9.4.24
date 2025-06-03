@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    char str[] = "Hello, C language"; // \0 要包含
+    
+    int counta=0,counte=0,counti=0,counto=0,countu=0;
+    
+    int len =0;
+    
+    while(str[len] != '\0')
+    {
+        len++;
+    }
+    
+    for(int i=0; i< len;i++)
+    {
+        switch(str[i])
+        {
+            case 'a': case 'A': counta++; break;
+            case 'e': case 'E': counte++; break;
+            case 'i': case 'I': counti++; break;
+            case 'o': case 'O': counto++; break;
+            case 'u': case 'U': countu++; break;
+        }
+    }
+    
+    printf("A :%d\n",counta);
+    printf("E :%d\n",counte);
+    printf("I :%d\n",counti);
+    printf("O :%d\n",counto);
+    printf("U :%d\n",countu);
+    
+    return 0;
+}
+
+ 
