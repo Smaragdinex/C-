@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define ROW 5
+
+void count(int arr[]);
+
+int main(void)
+{
+    int arr[ROW] = {3,0,9,8,2};
+    
+    count(arr);
+    return 0;
+}
+
+void count(int arr[])
+{
+    int i;
+    int countodd=0,counteven=0;
+    
+    for(i=0; i<ROW ;i++)
+    {
+        if(arr[i]%2 ==0)
+        {
+            counteven++;
+        }
+        else
+        {
+            countodd++;
+        }
+    }
+    printf("Odd count: %d\n",countodd);
+    printf("Even count: %d\n",counteven);
+}
