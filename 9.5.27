@@ -3,7 +3,11 @@
 void reverse(char str[]);
 int main(void)
 {
-   char str[] = "Hello, C language";
+   //char str[] = "Hello, C language";
+   
+   char str[100];
+   
+   fgets(str,sizeof(str),stdin);
    
     reverse(str);
     
@@ -19,6 +23,6 @@ void reverse(char str[])
     
     for(int i = len-1; i >= 0 ; i--)
     {
-        printf("%c",str[i]);
+        putchar(str[i]);
     }
 }
