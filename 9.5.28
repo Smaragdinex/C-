@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+void toLower(char str[]);
+int main(void)
+{
+   //char str[] = "Hello, C language";
+   
+   char str[100];
+   
+   fgets(str,sizeof(str),stdin);
+   
+    toLower(str);
+    
+    return 0;
+}
+void toLower(char str[])
+{
+    int i = 0;
+
+    while (str[i] != '\0')
+    {
+        // 如果是大寫字母，轉成小寫
+        if (str[i] >= 'A' && str[i] <= 'Z')
+        {
+            putchar(str[i] + 32);
+        }
+        else
+        {
+            putchar(str[i]);  // 保留原樣
+        }
+        i++;
+    }
+}
