@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+void add10(int *a, int *b);
+
+int main(void)
+{
+    int a = 3, b = 5;
+    
+    add10(&a,&b);
+    
+    printf("a = %d\n",a);
+    printf("b = %d\n",b);
+  
+    return 0;
+}
+
+void add10(int *a, int *b)
+{
+    *a = *a + 10;
+    *b = *b + 10;
+}
