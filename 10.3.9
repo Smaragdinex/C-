@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+void address(float *p1);
+
+int main(void)
+{
+    float pi = 3.14f;
+    float *ptr = &pi;
+    
+    address(&pi);
+    address(ptr);
+  
+    return 0;
+}
+
+void address(float *p1)
+{
+    printf("位於%p內, 儲存得變數內容為%f\n",p1,*p1);
+}
