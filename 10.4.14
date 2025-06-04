@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int i;
+    int arr[5] = {34,76,33,42,76};
+    
+    for(i=0; i < 5; i++)
+    {
+        *(arr + i) = *(arr +i) + 10;
+    }
+    
+    for(i=0;i<5;i++)
+    {
+        printf("arr[%d] = %d\n",i,arr[i]);
+    }
+    
+    return 0;
+}
+
