@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    char *ptr = "We are best friends.";
+    
+    int count = 0;
+    
+    while(*ptr != '\0')
+    {
+        if(*ptr >= 'a' && *ptr<= 'z')
+        {
+            count++;
+        }
+        ptr++;
+    }
+    printf("%d\n",count);
+    
+    return 0;
+}
+
