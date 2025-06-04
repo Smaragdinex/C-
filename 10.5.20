@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+   int count =0;
+   
+   char *ptr[3] = {"Tom", "Lilly", "James Lee"};
+   
+   for(int i=0; i< 3; i++)
+   {
+    puts(ptr[i]);
+    
+    char *p = ptr[i];
+    while(*p != '\0')
+    {
+        count++;
+        p++;
+    }
+   }
+    
+    printf("%d\n",count);
+   
+    return 0;
+}
+
+
+
